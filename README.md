@@ -1,7 +1,7 @@
 # `pssteval`
 
 This is a small set of tools for evaluation submissions for the 
-(Post-Stroke Speech Transcription (PSST))[https://psst.study]] challenge.
+[Post-Stroke Speech Transcription (PSST)](https://psst.study) challenge.
 
 ## Installation
 This package is installed via `pip`, like so:
