@@ -131,7 +131,7 @@ feature costs is shown here:
 | 0.75 | <div style="text-align: center">[-feature]&nbsp;↔&nbsp;[+-feature]<br/>[-+feature]&nbsp;↔&nbsp;[+feature]</div>                                                                                                                         |
 | 0.5  | [-feature]&nbsp;↔&nbsp;[0feature] <br /> <div style="text-align: center">[-+feature]&nbsp;↔&nbsp;[+-feature] <br /> [0feature]&nbsp;↔&nbsp;[+feature] </div>                                                                            |
 | 0.25 | <div style="text-align: center">[-feature]&nbsp;↔&nbsp;[-+feature]<br /> [-+feature]&nbsp;↔&nbsp;[0feature] <br /> [0feature]&nbsp;↔&nbsp;[+-feature]  <br/> [+-feature]&nbsp;↔&nbsp;[+feature]</div>                                   |
-| 0    | <div style="text-align: center"> [-feature]&nbsp;=&nbsp;[-feature] <br/> [-+feature]&nbsp;=&nbsp;[-+feature]<br/>[0feature]&nbsp;=&nbsp;[0feature]<br/>[+-feature]&nbsp;=&nbsp;[+-feature]<br/>[+feature]&nbsp;=&nbsp;[+feature] </div> |
+| 0    | <div style="text-align: center"> [-feature]&nbsp;↔&nbsp;[-feature] <br/> [-+feature]&nbsp;↔&nbsp;[-+feature]<br/>[0feature]&nbsp;↔&nbsp;[0feature]<br/>[+-feature]&nbsp;↔&nbsp;[+-feature]<br/>[+feature]&nbsp;↔&nbsp;[+feature] </div> |
 
 ### A little more on diphthongs
 The vowels and features affected by the diphthong rules are shown in the table below. Note: /a͡ɪ/ and /a͡ʊ/ move from
@@ -152,5 +152,5 @@ phoneme apart. For example, consider the distance from /kɔl/ "call" to /ko͡ʊl
 distinguished only by their vowels: /ɔ/ versus /o͡ʊ/. If we treat /o͡ʊ/ as two phonemes during distance calculation, 
 we can go from /ɔ/ to /o/ with only [+tense], but then we must suffer the cost of a full /ʊ/ insertion. The way we
 handle diphthongs eliminates this diphthong penalty, and is better aligned with the intuition
-that resulted in ARPAbet using a single token for both monophthongs and diphthongs.s
+that resulted in ARPAbet using a single token for both monophthongs and diphthongs.
 
