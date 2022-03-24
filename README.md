@@ -79,14 +79,14 @@ pssteval-viewer out/analysis/details-asr-analysis.json
 This starts a local web server at `http://localhost:8000`. If you navigate to this URL, you can explore your results in
 an interactive way. Your transcripts with the highest FER appear first.
 
-<img src="pssteval-viewer-list.png" style="max-width: 480px;">
+<img src="pssteval-viewer-list.png" style="width: 480px;">
 
 If you click on an Utterance ID from the table, you can see a full trace of the feature distance 
 computation. There's also an audio player, which uses [`psstdata`](https://github.com/PSST-Challenge/psstbaseline) to 
 let you hear the utterance while you're looking at its trace. Also, hover over the feature names in a trace
 to see the cost associated with it.
 
-<img src="pssteval-viewer-detail.png" style="max-width: 480px;">
+<img src="pssteval-viewer-detail.png" style="width: 480px;">
 
 
 ## Details about the error rates
