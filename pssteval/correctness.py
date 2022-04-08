@@ -14,6 +14,7 @@ def get_args():
 
 def do_correctness_evaluation(tsv_files, out_dir=None, log_level="INFO"):
     logger.setLevel(log_level)
+    logger.info(f"Evaluation tools for the PSST challenge, version {pssteval.VERSION}")
     for tsv_file in tsv_files:
         analysis = pssteval.evaluate_correctness(tsv_file, log_level=log_level)
 

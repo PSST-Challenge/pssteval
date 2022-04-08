@@ -1,8 +1,10 @@
 import setuptools
 
+import pssteval
+
 setuptools.setup(
     name='pssteval',
-    version='0.0.0',
+    version=pssteval.VERSION,
     author='Portland Allied Labs for Aphasia Technology (PALAT)',
     author_email='galer@ohsu.edu',
     packages=['pssteval'],

@@ -18,10 +18,12 @@ def get_args():
 
 
 def do_asr_evaluation(tsv_files, out_dir, n_jobs=None, log_level="INFO"):
+    logger.setLevel(log_level)
+    logger.info(f"Evaluation tools for the PSST challenge, version {pssteval.VERSION}")
+
     if out_dir:
         out_dir = os.path.expanduser(out_dir)
     n_jobs = n_jobs or multiprocessing.cpu_count() - 1
-    logger.setLevel(log_level)
     for tsv_file in tsv_files:
         analysis = pssteval.evaluate_asr(tsv_file, n_jobs=n_jobs, log_level=log_level)
         out_filename = os.path.join(
