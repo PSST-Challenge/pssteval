@@ -103,7 +103,7 @@ def evaluate_correctness(filename, log_level="INFO") -> ErrorAnalysisDict:
     split, split_data = detect_split(set(correctness_output.keys()), data)
 
     utterance_ids, y_true, y_pred = zip(*(
-        (utterance_id, row.prediction, split_data[utterance_id].correctness)
+        (utterance_id, split_data[utterance_id].correctness, row.prediction)
         for utterance_id, row in correctness_output.items()
     ))
 
