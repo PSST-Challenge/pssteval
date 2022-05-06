@@ -1,7 +1,7 @@
 # `pssteval`
 
 This is a small set of tools for evaluation submissions for the 
-(Post-Stroke Speech Transcription (PSST))[https://psst.study]] challenge.
+[Post-Stroke Speech Transcription (PSST)](https://psst.study) challenge.
 
 ## Installation
 This package is installed via `pip`, like so:
@@ -79,14 +79,14 @@ pssteval-viewer out/analysis/details-asr-analysis.json
 This starts a local web server at `http://localhost:8000`. If you navigate to this URL, you can explore your results in
 an interactive way. Your transcripts with the highest FER appear first.
 
-<img src="pssteval-viewer-list.png" style="max-width: 480px;">
+<img src="pssteval-viewer-list.png" style="width: 480px;">
 
 If you click on an Utterance ID from the table, you can see a full trace of the feature distance 
 computation. There's also an audio player, which uses [`psstdata`](https://github.com/PSST-Challenge/psstbaseline) to 
 let you hear the utterance while you're looking at its trace. Also, hover over the feature names in a trace
 to see the cost associated with it.
 
-<img src="pssteval-viewer-detail.png" style="max-width: 480px;">
+<img src="pssteval-viewer-detail.png" style="width: 480px;">
 
 
 ## Details about the error rates
@@ -131,7 +131,7 @@ feature costs is shown here:
 | 0.75 | <div style="text-align: center">[-feature]&nbsp;↔&nbsp;[+-feature]<br/>[-+feature]&nbsp;↔&nbsp;[+feature]</div>                                                                                                                         |
 | 0.5  | [-feature]&nbsp;↔&nbsp;[0feature] <br /> <div style="text-align: center">[-+feature]&nbsp;↔&nbsp;[+-feature] <br /> [0feature]&nbsp;↔&nbsp;[+feature] </div>                                                                            |
 | 0.25 | <div style="text-align: center">[-feature]&nbsp;↔&nbsp;[-+feature]<br /> [-+feature]&nbsp;↔&nbsp;[0feature] <br /> [0feature]&nbsp;↔&nbsp;[+-feature]  <br/> [+-feature]&nbsp;↔&nbsp;[+feature]</div>                                   |
-| 0    | <div style="text-align: center"> [-feature]&nbsp;=&nbsp;[-feature] <br/> [-+feature]&nbsp;=&nbsp;[-+feature]<br/>[0feature]&nbsp;=&nbsp;[0feature]<br/>[+-feature]&nbsp;=&nbsp;[+-feature]<br/>[+feature]&nbsp;=&nbsp;[+feature] </div> |
+| 0    | <div style="text-align: center"> [-feature]&nbsp;↔&nbsp;[-feature] <br/> [-+feature]&nbsp;↔&nbsp;[-+feature]<br/>[0feature]&nbsp;↔&nbsp;[0feature]<br/>[+-feature]&nbsp;↔&nbsp;[+-feature]<br/>[+feature]&nbsp;↔&nbsp;[+feature] </div> |
 
 ### A little more on diphthongs
 The vowels and features affected by the diphthong rules are shown in the table below. Note: /a͡ɪ/ and /a͡ʊ/ move from
@@ -152,5 +152,5 @@ phoneme apart. For example, consider the distance from /kɔl/ "call" to /ko͡ʊl
 distinguished only by their vowels: /ɔ/ versus /o͡ʊ/. If we treat /o͡ʊ/ as two phonemes during distance calculation, 
 we can go from /ɔ/ to /o/ with only [+tense], but then we must suffer the cost of a full /ʊ/ insertion. The way we
 handle diphthongs eliminates this diphthong penalty, and is better aligned with the intuition
-that resulted in ARPAbet using a single token for both monophthongs and diphthongs.s
+that resulted in ARPAbet using a single token for both monophthongs and diphthongs.
 
